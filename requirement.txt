@@ -1,0 +1,7 @@
+Django
+django-widget-tweaks
+sqlparse
+elastic-apm
+xhtml2pdf
+psutil
+locust

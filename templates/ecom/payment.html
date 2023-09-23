@@ -1,0 +1,86 @@
+{% extends 'ecom/customer_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+
+</head>
+<style media="screen">
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #b92b27, #1565c0)
+}
+    .panel-title {
+        display: inline;
+        font-weight: bold;
+    }
+
+    .checkbox.pull-right {
+        margin: 0;
+    }
+
+    .pl-ziro {
+        padding-left: 0px;
+    }
+</style>
+<br><br>
+<marquee style="color: floralwhite;" scrolldelay="50">PÁGINA DE PAGAMENTO DE DEMOSTRAÇÃO. NÃO REQUER DADOS REAIS DE CARTÃO DE CRÉDITO</marquee>
+<br><br>
+<div class="container" style="text-align:center; padding-left:300px;">
+    <div class="row">
+        <div class="col-xs-12 col-md-4" style="height:500px; width:600px;">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">DETALHES DO PAGAMENTO</h3>
+                    <div class="checkbox pull-right">
+                        <label>
+                            <input type="checkbox" />Lembrar</label>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form role="form" method="post">
+                        <div class="form-group">
+                            <label for="cardNumber">NÚMERO DO CARTÃO</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="cardNumber" placeholder="NÚMERO DO CARTÃO"
+                                    required autofocus />
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-md-5">
+                                <div class="form-group">
+                                    <label>DATA DE EXPIRAÇÃO</label>
+                                    <div class="col-xs-6 col-lg-6">
+                                        <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                    </div>
+                                    <div class="col-xs-6 col-lg-6 pl-ziro">
+                                        <input type="text" class="form-control" id="expityYear" placeholder="AA" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label for="cvCode">CÓDIGO CV</label>
+                                    <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#"><span class="badge pull-right">{{total}}</span> VALOR FINAL</a>
+                </li>
+            </ul>
+            <br />
+            <a href="/payment-success" class="btn btn-success btn-lg btn-block" role="button">EFETUAR PAGAMENTO</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

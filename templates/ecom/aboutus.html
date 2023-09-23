@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Tutorial Elastic APM</title>
+  <style media="screen">
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #b92b27, #1565c0)
+}
+  </style>
+</head>
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h1 style="text-align:center; color: floralwhite;">Python Nordeste Salvador 2023</h1>
+<br><br><br><br>
+<h3 style="text-align:center; color: floralwhite;">Explorando o Poder do Elastic APM</h3>
+<h3 style="text-align:center; color: floralwhite;">Observabilidade e Detecção de Anomalias em Aplicações Django</h3>
+<br><br><br><br><br><br><br><br>
+<h3 style="text-align:center; color: floralwhite;">Isaac Silva</h3>
+</html>
